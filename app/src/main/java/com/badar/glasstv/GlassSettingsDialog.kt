@@ -78,7 +78,7 @@ fun GlassSettingsDialog(
                     text = st.label,
                     modifier = Modifier.fillMaxWidth(),
                     selected = vm.clockStyle == st
-                ) { vm.setClockStyle(st) }
+                ) { vm.updateClockStyle(st) }
             }
 
             GlassSectionTitle("Glass tint")
@@ -87,7 +87,7 @@ fun GlassSettingsDialog(
                     text = m.label,
                     modifier = Modifier.fillMaxWidth(),
                     selected = vm.tintMode == m
-                ) { vm.setTintMode(m) }
+                ) { vm.updateTintMode(m) }
             }
 
             GlassSectionTitle("Depth overlap height")
@@ -97,7 +97,7 @@ fun GlassSettingsDialog(
                         text = d.label,
                         modifier = Modifier.weight(1f),
                         selected = vm.depth == d
-                    ) { vm.setDepth(d) }
+                    ) { vm.updateDepth(d) }
                 }
             }
 

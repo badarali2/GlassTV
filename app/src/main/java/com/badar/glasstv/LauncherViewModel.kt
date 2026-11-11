@@ -55,9 +55,9 @@ class LauncherViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     // ---------- settings ----------
-    fun setClockStyle(v: IosClockStyle) { clockStyle = v; prefs.clockStyle = v }
-    fun setTintMode(v: GlassTintMode) { tintMode = v; prefs.tintMode = v }
-    fun setDepth(v: DepthOverlap) { depth = v; prefs.depthOverlap = v }
+    fun updateClockStyle(v: IosClockStyle) { clockStyle = v; prefs.clockStyle = v }
+    fun updateTintMode(v: GlassTintMode) { tintMode = v; prefs.tintMode = v }
+    fun updateDepth(v: DepthOverlap) { depth = v; prefs.depthOverlap = v }
     fun selectPreset(id: String) { wallpaperId = id; prefs.wallpaperId = id }
 
     fun setCustomWallpaper(uri: Uri) = loadCustom(uri, false)
